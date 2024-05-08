@@ -28,6 +28,4 @@ test('Execute INSERT INTO Query for grades.csv', async () => {
     expect(newEntry).toBeDefined();
     expect(newEntry.grade).toEqual('A');
 
-    // Cleanup: Delete grades.csv
-    fs.unlinkSync('grades.csv');
 });

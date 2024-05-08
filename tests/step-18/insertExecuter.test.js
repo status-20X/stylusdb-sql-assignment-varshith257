@@ -1,4 +1,4 @@
-const { executeINSERTQuery } = require('../../src/index');
+const { executeINSERTQuery } = require('../../src/queryExecutor');
 const { readCSV, writeCSV } = require('../../src/csvReader');
 const fs = require('fs');
 
@@ -28,6 +28,4 @@ test('Execute INSERT INTO Query for grades.csv', async () => {
     expect(newEntry).toBeDefined();
     expect(newEntry.grade).toEqual('A');
 
-    // Cleanup: Delete grades.csv
-    fs.unlinkSync('grades.csv');
 });
